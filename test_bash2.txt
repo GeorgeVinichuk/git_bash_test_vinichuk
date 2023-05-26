@@ -1,0 +1,90 @@
+ora@vv MINGW64 /d/VS Code File/bash6
+$ mkdir test3
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ echo -e "row1\nrow2\nrow3\nrow4" > test3/file4.txt
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ echo -e "row1\nrow2\nrow3\nrow4" > test3/file5.txt
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ echo -e "row1\nrow2\nrow3\nrow4" > test3/file6.txt
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ grep "row2" test3/file5.txt
+row2
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ grep -r "row" test3
+test3/file4.txt:row1
+test3/file4.txt:row2
+test3/file4.txt:row3
+test3/file4.txt:row4
+test3/file5.txt:row1
+test3/file5.txt:row2
+test3/file5.txt:row3
+test3/file5.txt:row4
+test3/file6.txt:row1
+test3/file6.txt:row2
+test3/file6.txt:row3
+test3/file6.txt:row4
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ grep -c "row" test3/file6.txt
+4
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ find test3 -name "file5.txt"
+test3/file5.txt
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ find test3 -name "file5.txt" -delete
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ echo "test" >> test3/file4.txt
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ sed -i 's/test/fail/g' test3/file4.txt
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ echo "$(cat test3/file4.txt) test" > test3/file4.txt
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ ps aux
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1318    1260    1318       8532  cons0     197609 01:42:05 /usr/bin/ps
+     1260       1    1260       9316  cons0     197609 01:36:13 /usr/bin/bash
+      611       1     611       2672  ?         197609 19:12:48 /usr/bin/ssh-agent
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ kill 666
+bash: kill: (666) - No such process
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ ping -c 1 artsiomrusau.com
+Доступ запрещен. Для параметра -c требуются права администратора.
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ ping -c 5 artsiomrusau.com
+Доступ запрещен. Для параметра -c требуются права администратора.
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ curl -X GET https://petstore.swagger.io/pet
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+
+Jora@vv MINGW64 /d/VS Code File/bash6
+$ curl -X POST -H "Content-Type: application/json" -d '{"username": "newuser", "password": "password123"}' https://petstore.swagger
+.io/user
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
